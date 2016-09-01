@@ -31,4 +31,8 @@ public class ProductoMultimedia extends Producto
     public String getTitulo(){
         return this.titulo;
     }
+     @Override
+     public String getNombreProducto(){
+        return getTitulo();
+        }
 }

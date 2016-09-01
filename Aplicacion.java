@@ -10,6 +10,7 @@ public class Aplicacion extends Producto
     private String nombre;
     private float tamanio;
     private Enum categoria;
+    private static int CONTADOR=0;
 
     /**
      * Constructor for objects of class Aplicacion
@@ -19,6 +20,7 @@ public class Aplicacion extends Producto
        this.nombre = nombre;
        this.tamanio = tamanio;
        this.categoria = categoria;
+       CONTADOR++;
     
     }
     /**
@@ -40,4 +42,12 @@ public class Aplicacion extends Producto
     public Enum getCategoria(){
         return this.categoria;
     }
+     @Override
+     public String  getNombreProducto(){
+        return getNombre();
+        }
+        
+        
+      
+          
 }

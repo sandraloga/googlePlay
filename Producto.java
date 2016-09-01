@@ -6,10 +6,18 @@
  */
 public abstract class Producto
 {
-   private int contadorProductos;
-   
+   private static  int contadorProductos=0;
+   public static final float PRECIO_INICIAL = 0.99f;  
     public Producto(){
-        contadorProductos=0;
+        contadorProductos++;
     
     }
+ 
+    public abstract String getNombreProducto();
+    
+    
+    private int getcontadorProductos(){
+        return contadorProductos;
+    }
+    
 }
