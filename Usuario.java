@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 /**
  * Write a description of class Usuario here.
  * 
@@ -9,10 +10,12 @@ public class Usuario
    
 
     private String correo;
+    public ArrayList<Producto> productos;
 
     public Usuario(String correo)
     {
         this.correo = correo;
+        productos=new ArrayList<>();
     }
 
     /**
@@ -23,5 +26,8 @@ public class Usuario
 
             return this.correo;
         }
+    }
+    public void addProducto(Producto producto){
+       productos.add(producto); 
     }
 }

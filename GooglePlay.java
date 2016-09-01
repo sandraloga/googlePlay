@@ -50,6 +50,8 @@ public class GooglePlay
         for(int i=0; i<=usuarios.size();i++){
             if(usuarios.get(i).getNombreCuenta().equalsIgnoreCase(correo)){
                 encontradoCorreo=true;
+                if(usuarios.get(i).us
+                
             }
         }
         // buscamos el nombre del producto
