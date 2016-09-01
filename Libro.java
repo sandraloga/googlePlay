@@ -7,29 +7,35 @@
  */
 public class Libro extends ProductoMultimedia
 {
-    private int duracion;
+    private int numPaginas;
     private boolean ficcion;
 
     /**
      * Constructor for objects of class Libro
      */
-    public Libro(String titulo, int anio, int duracion, boolean ficcion)
+    public Libro(String titulo, int anio, int numPaginas, boolean ficcion)
     {
         super(titulo,anio);
-        this.duracion = duracion;
+        this.numPaginas = numPaginas;
         this.ficcion = ficcion;
     }
 
     /**
      * 
      */
-    public int getDuracion()
+    public int getNumeroPaginas()
     {
-        return this.duracion;
+        return this.numPaginas;
     }
 
     public boolean getFiccion(){
         return ficcion;
+    }
+    
+    public float precio(){
+        float precio=(getNumeroPaginas()/100)*(2010-super.getAno());
+        return precio;
+        
     }
 
 }

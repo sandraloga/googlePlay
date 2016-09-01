@@ -41,9 +41,11 @@ public class GooglePlay
         return productos.size();
     }
     
-    public void comprar (String correo , String nombreProducto){
+    public float comprar (String correo , String nombreProducto){
+        float precio=-1;
         boolean encontradoCorreo=false;   //partimos que no existe el coreeo
         boolean encontradoProducto=false;  //partimos que no existe el producto
+        int indice=0;
         //buscamos el correo del usuario
         for(int i=0; i<=usuarios.size();i++){
             if(usuarios.get(i).getNombreCuenta().equalsIgnoreCase(correo)){
@@ -54,8 +56,14 @@ public class GooglePlay
         for(int i=0; i<=productos.size();i++){
             if(productos.get(i).getNombreProducto().equalsIgnoreCase(nombreProducto)){
                 encontradoProducto=true;
+                indice = i;
             }
         }
+        if (encontradoCorreo==false || encontradoProducto==false){
+            precio= productos.get(indice).precio();
+        
+        }
+        return precio;
         
     }
    

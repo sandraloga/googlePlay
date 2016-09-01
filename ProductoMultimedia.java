@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ProductoMultimedia extends Producto
+public  abstract class  ProductoMultimedia extends Producto
 {
     private String titulo;
     private int anioCreacion;

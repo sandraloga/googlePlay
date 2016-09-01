@@ -42,4 +42,18 @@ public class Pelicula extends ProductoMultimedia
         
         return calidad;
     }
+    public float precio(){
+        float precio =0;
+        if(getCalidad().equalsIgnoreCase("FullHD")){
+            precio=10;
+        
+        
+        }else{
+            precio=5;
+        }
+        if(super.getAno()<2000){
+            precio/=2;
+        }
+        return precio;
+    }
 }

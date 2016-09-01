@@ -19,5 +19,6 @@ public abstract class Producto
     private int getcontadorProductos(){
         return contadorProductos;
     }
+    public abstract float precio();
     
 }
