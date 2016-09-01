@@ -8,28 +8,36 @@
 public class Aplicacion extends Producto
 {
     private String nombre;
-    private float espacio;
-    private String categoria;
+    private float tamanio;
+    private Enum categoria;
 
     /**
      * Constructor for objects of class Aplicacion
      */
-    public Aplicacion(String nombre,float espacio, Enum categoria)
+    public Aplicacion(String nombre,float tamanio, Enum categoria)
     {
        this.nombre = nombre;
-       this.espacio = espacio;
-       this.categiria = categoria;
+       this.tamanio = tamanio;
+       this.categoria = categoria;
+    
     }
-
     /**
      * An example of a method - replace this comment with your own
      * 
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public String getNombre()
     {
-        // put your code here
-        return x + y;
+        
+        return this.nombre;
+    }
+    
+    public float getTamanoEnMB(){
+        return this. tamanio;
+    }
+    
+    public Enum getCategoria(){
+        return this.categoria;
     }
 }

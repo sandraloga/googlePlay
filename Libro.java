@@ -8,24 +8,28 @@
 public class Libro extends ProductoMultimedia
 {
     private int duracion;
-    private boolean calidadFull;
+    private boolean ficcion;
 
     /**
      * Constructor for objects of class Libro
      */
-    public Libro(String titulo, int anio, int duracion, boolean calidadFull)
+    public Libro(String titulo, int anio, int duracion, boolean ficcion)
     {
-       super(titulo,anio);
-       this.duracion = duracion;
-       this.calidadFull = calidadFull;
+        super(titulo,anio);
+        this.duracion = duracion;
+        this.ficcion = ficcion;
     }
 
     /**
      * 
      */
-    public int sampleMethod(int y)
+    public int getDuracion()
     {
-        // put your code here
-        return x + y;
+        return this.duracion;
     }
+
+    public boolean getFiccion(){
+        return ficcion;
+    }
+
 }

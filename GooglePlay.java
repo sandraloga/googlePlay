@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class GooglePlay
 {
     private ArrayList<Usuario> usuarios;
+    private ArrayList<Producto> productos;
 
     /**
      * Constructor for objects of class GooglePlay
@@ -15,6 +16,7 @@ public class GooglePlay
     public GooglePlay()
     {
         this.usuarios = new ArrayList<>();
+        this.productos = new ArrayList<>();
     }
 
     /**
@@ -27,4 +29,16 @@ public class GooglePlay
     {
         usuarios.add(usuario);
     }
+    public int getNumeroUsuarios(){
+        return usuarios.size();
+    }
+    
+    public void addProducto(Producto producto){
+        productos.add(producto);
+    }
+    
+    public int getNumeroProductos(){
+        return productos.size();
+    }
+    
 }

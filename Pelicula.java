@@ -7,16 +7,17 @@
  */
 public class Pelicula extends ProductoMultimedia
 {
-   private int numPaginas;
-   private boolean ficcion;
+   private int duracion;
+   private int calidad;
 
     /**
      * Constructor for objects of class Pelicula
      */
-    public Pelicula()
+    public Pelicula(String titulo, int anio, int duracion , int calidad)
     {
-        // initialise instance variables
-        x = 0;
+       super(titulo,anio);
+       this.duracion = duracion;
+       this.calidad = calidad;
     }
 
     /**
@@ -25,9 +26,20 @@ public class Pelicula extends ProductoMultimedia
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public int getDuracion()
     {
-        // put your code here
-        return x + y;
+       
+        return this.duracion;
+    }
+    
+    public String getCalidad(){
+        String calidad = "";
+        if(this.calidad>=1080){
+            calidad="FullHD";
+        }else{
+            calidad="HD";
+        }
+        
+        return calidad;
     }
 }

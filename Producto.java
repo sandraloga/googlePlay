@@ -6,10 +6,10 @@
  */
 public abstract class Producto
 {
+   private int contadorProductos;
    
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Producto(){
+        contadorProductos=0;
+    
     }
 }
