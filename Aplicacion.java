@@ -8,14 +8,15 @@
 public class Aplicacion extends Producto
 {
     private String nombre;
-    private float tamanio;
+    private double tamanio;
     private Enum categoria;
     private static int CONTADOR=0;
+    private static final double PRECIO_INICIAL = 0.99;
 
     /**
      * Constructor for objects of class Aplicacion
      */
-    public Aplicacion(String nombre,float tamanio, Enum categoria)
+    public Aplicacion(String nombre,double tamanio, Enum categoria)
     {
         this.nombre = nombre;
         this.tamanio = tamanio;
@@ -36,7 +37,7 @@ public class Aplicacion extends Producto
         return this.nombre;
     }
 
-    public float getTamanoEnMB(){
+    public double getTamanoEnMB(){
         return this. tamanio;
     }
 
@@ -53,18 +54,18 @@ public class Aplicacion extends Producto
         return CONTADOR;
     }  
 
-    public float precio(){
-        float precio = 0.99f;
-        if(CONTADOR>2){
+    public double precio(){
+        double precio= PRECIO_INICIAL;
+        if(getCuantasVendidas() > 2){
             if(getCategoria()==Categoria.JUEGOS){
                 precio=5;
+            }else if(getCategoria()==Categoria.PRODUCTIVIDAD){
+                precio=10;
+            }else{
+                precio=2;
             }
-        }else if(getCategoria()==Categoria.PRODUCTIVIDAD){
-            precio=10;
-        }else{
-            precio=2;
+           
         }
-        return precio;
+          return precio;
     }
-
 }

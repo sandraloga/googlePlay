@@ -32,8 +32,8 @@ public class Libro extends ProductoMultimedia
         return ficcion;
     }
     
-    public float precio(){
-        float precio=(getNumeroPaginas()/100)*(2010-super.getAno());
+    public double precio(){
+        double precio=(getNumeroPaginas()/100)*(Math.abs(2010-super.getAno()));
         return precio;
         
     }

@@ -41,16 +41,17 @@ public class GooglePlay
         return productos.size();
     }
     
-    public float comprar (String correo , String nombreProducto){
-        float precio=-1;
+    public double comprar (String correo , String nombreProducto){
+        double precio=-1;
         boolean encontradoCorreo=false;   //partimos que no existe el coreeo
         boolean encontradoProducto=false;  //partimos que no existe el producto
-        int indice=0;
+        int indice=0;//indice del producto
+        int indiceUsuario=-1; //indice ususario
         //buscamos el correo del usuario
         for(int i=0; i<=usuarios.size();i++){
             if(usuarios.get(i).getNombreCuenta().equalsIgnoreCase(correo)){
                 encontradoCorreo=true;
-                if(usuarios.get(i).us
+                indiceUsuario=i;
                 
             }
         }
@@ -61,13 +62,16 @@ public class GooglePlay
                 indice = i;
             }
         }
-        if (encontradoCorreo==false || encontradoProducto==false){
-            precio= productos.get(indice).precio();
-        
+        if (encontradoCorreo && encontradoProducto){
+            precio= productos.get(indice).precio(); //invocamos al el metodo abstrac del precio dependiendo de cual sea el producto
+            productos.get(indice).incrementarVentas(); //incrementamos el atributo de ventas de ese producto
+            usuarios.get(indiceUsuario).addProducto(productos.get(indice)); // añado el producto al array de productos del usuario
         }
         return precio;
         
     }
+    
+    
    
     
     

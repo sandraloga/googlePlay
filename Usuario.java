@@ -19,7 +19,7 @@ public class Usuario
     }
 
     /**
-     * dos dice el correo del usuario
+     * nos dice el correo del usuario
      */
     public String getNombreCuenta(){
         {

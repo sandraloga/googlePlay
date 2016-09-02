@@ -7,7 +7,9 @@
 public abstract class Producto
 {
    private static  int contadorProductos=0;
-   public static final float PRECIO_INICIAL = 0.99f;  
+   private int cuantasVendidas; //contador ventas
+   
+   
     public Producto(){
         contadorProductos++;
     
@@ -19,6 +21,14 @@ public abstract class Producto
     private int getcontadorProductos(){
         return contadorProductos;
     }
-    public abstract float precio();
+    public abstract double precio();
+    
+    public void incrementarVentas(){
+        this.cuantasVendidas++;
+    }
+    
+    public int getCuantasVendidas(){
+        return this.cuantasVendidas;
+    }
     
 }
