@@ -27,7 +27,20 @@ public class Usuario
             return this.correo;
         }
     }
+    
     public void addProducto(Producto producto){
        productos.add(producto); 
+    }
+    /**
+     * devuelve true si encuentra el producto en la lista de productos del usuario
+     */
+    public boolean buscarProducto(Producto producto){
+        boolean encontrado = false; //partimos que el producto no esta repetido
+        for(int i=0; i< productos.size() ; i++){
+            if(productos.get(i)==producto){
+                encontrado = true;
+            }
+        }
+        return encontrado;
     }
 }

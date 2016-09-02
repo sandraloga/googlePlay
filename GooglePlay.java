@@ -48,7 +48,7 @@ public class GooglePlay
         int indice=0;//indice del producto
         int indiceUsuario=-1; //indice ususario
         //buscamos el correo del usuario
-        for(int i=0; i<=usuarios.size();i++){
+        for(int i=0; i<usuarios.size();i++){
             if(usuarios.get(i).getNombreCuenta().equalsIgnoreCase(correo)){
                 encontradoCorreo=true;
                 indiceUsuario=i;
@@ -56,10 +56,13 @@ public class GooglePlay
             }
         }
         // buscamos el nombre del producto
-        for(int i=0; i<=productos.size();i++){
+        for(int i=0; i<productos.size();i++){
             if(productos.get(i).getNombreProducto().equalsIgnoreCase(nombreProducto)){
                 encontradoProducto=true;
                 indice = i;
+                if(usuarios.get(i).buscarProducto(productos.get(i))){
+                    encontradoProducto=false;//el producto ya esta en la lista del usuario, pongo el atributo booleano a false para que no pueda realizar la compra
+                }
             }
         }
         if (encontradoCorreo && encontradoProducto){
@@ -70,8 +73,13 @@ public class GooglePlay
         return precio;
         
     }
+    /**
+     * Implementa un método que devuelva el identificador y el número de ventas de los 3 productos que han tenido más ventas ordenados
+     * de mayor a menor ventas. En caso de empate en ventas no se define criterio para la ordenación
+     */
     
     
+   
    
     
     
