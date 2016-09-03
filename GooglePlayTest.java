@@ -295,7 +295,7 @@ public class GooglePlayTest
         googlePlay.comprar("lorena.alonso@gmail.com", "El renacido"); 
         
         // Se piden los 3 productos de la tienda con más ventas
-        //assertEquals("\"El renacido\" (4) - \"Whatsapp\" (3) - \"Pokemon GO\" (2)", googlePlay.topVentas());
+        assertEquals("\"El renacido\" (4) - \"Whatsapp\" (3) - \"Pokemon GO\" (2)", googlePlay.topVentas());
     }            
 }
 

@@ -6,21 +6,20 @@
  */
 public abstract class Producto
 {
-   private static  int contadorProductos=0;
+  
    private int cuantasVendidas; //contador ventas
+   public static final double PRECIO_INICIAL= 0.99;
    
    
     public Producto(){
-        contadorProductos++;
-    
+      
+       this.cuantasVendidas = 0;
     }
  
     public abstract String getNombreProducto();
     
     
-    private int getcontadorProductos(){
-        return contadorProductos;
-    }
+  
     public abstract double precio();
     
     public void incrementarVentas(){

@@ -15,8 +15,9 @@ public  abstract class  ProductoMultimedia extends Producto
      */
     public ProductoMultimedia(String titulo, int anio)
     {
-       this.titulo = titulo;
-       anioCreacion = anio;
+        super();
+        this.titulo = titulo;
+        anioCreacion = anio;
     }
 
     /**
@@ -24,15 +25,21 @@ public  abstract class  ProductoMultimedia extends Producto
      */
     public int getAno()
     {
-        
+
         return this.anioCreacion;
     }
-    
+
     public String getTitulo(){
         return this.titulo;
     }
-     @Override
-     public String getNombreProducto(){
+
+    @Override
+    public String getNombreProducto(){
         return getTitulo();
-        }
+    }
+
+    @Override
+    public double precio(){
+        return PRECIO_INICIAL;
+    }
 }

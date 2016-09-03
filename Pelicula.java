@@ -7,17 +7,17 @@
  */
 public class Pelicula extends ProductoMultimedia
 {
-   private int duracion;
-   private int calidad;
+    private int duracion;
+    private int calidad;
 
     /**
      * Constructor for objects of class Pelicula
      */
     public Pelicula(String titulo, int anio, int duracion , int calidad)
     {
-       super(titulo,anio);
-       this.duracion = duracion;
-       this.calidad = calidad;
+        super(titulo,anio);
+        this.duracion = duracion;
+        this.calidad = calidad;
     }
 
     /**
@@ -28,10 +28,10 @@ public class Pelicula extends ProductoMultimedia
      */
     public int getDuracion()
     {
-       
+
         return this.duracion;
     }
-    
+
     public String getCalidad(){
         String calidad = "";
         if(this.calidad>=1080){
@@ -39,15 +39,15 @@ public class Pelicula extends ProductoMultimedia
         }else{
             calidad="HD";
         }
-        
+
         return calidad;
     }
+
     public double precio(){
         double precio =0;
         if(getCalidad().equalsIgnoreCase("FullHD")){
             precio=10;
-        
-        
+
         }else{
             precio=5;
         }
